@@ -387,7 +387,7 @@ class RabbitVCS(Nautilus.InfoProvider, Nautilus.MenuProvider,
         conditions_dict = None
         if paths_str in self.items_cache:
             conditions_dict = self.items_cache[paths_str]
-            if conditions_dict and conditions_dict != "in-progress":
+            if conditions_dict:
                 conditions = NautilusMenuConditions(conditions_dict)
                 menu = NautilusMainContextMenu(self, window.base_dir, paths, conditions).get_menu()
                 return menu
